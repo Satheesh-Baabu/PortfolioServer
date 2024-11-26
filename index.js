@@ -12,6 +12,8 @@ app.use(cors({
   app.options('/contact', cors()); 
 
 mongoose.connect("mongodb+srv://satheesh:portfolio@contactform.h51kp.mongodb.net/?retryWrites=true&w=majority&appName=ContactForm")
+// console.log(process.env.DB_URI)
+// mongoose.connect(process.env.DB_URI)
 .then(()=>console.log('DB connected'))
 .catch(()=>{console.log("Error in db connection")})
 
